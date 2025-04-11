@@ -1,0 +1,24 @@
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  transition: background 1s ease;
+}
+
+.animated-bg {
+  background: linear-gradient(135deg, #020202, #121212, #afafaf);
+  background-size: 400% 400%;
+  animation: pulseMove 8s ease infinite, brightnessPulse 4s ease-in-out infinite;
+}
+
+@keyframes pulseMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes brightnessPulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
